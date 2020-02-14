@@ -1,0 +1,56 @@
+.aboutTitle {
+    color: #3030FF;
+    margin-top: -1rem;
+}
+
+.aboutContainer {
+    display: grid;
+    grid-column-gap: 7rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "aboutHeader aboutBody"
+    "aboutDescription aboutBody"
+}
+
+.aboutDescription  p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.aboutDescription {
+    grid-area: aboutDescription;
+}
+
+.aboutHeader {
+    grid-area: aboutHeader;
+}
+
+.aboutBody {
+    grid-area: aboutBody;
+    align-self: center;
+}
+
+.aboutBody .cardContent {
+    margin: 0.5rem;
+}
+.aboutBody .cardText {
+    margin: 10% 0;
+}
+
+.aboutBody .cardLink {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1200px){
+    .aboutContainer {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "aboutHeader"
+        "aboutDescription"
+        "aboutBody"
+        "aboutBody"
+    }
+}

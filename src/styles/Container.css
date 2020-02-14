@@ -1,0 +1,101 @@
+/*.resume {
+    width : 210mm;
+    height: 297mm;
+    border: 1px solid black;
+  }*/
+
+@media print {
+    /* remove any screen only styles, for example link underline */
+}
+
+@page {
+    padding: 0;
+    margin: 0cm;
+    size: A4 portrait;
+}
+
+.resume {
+    display: grid;
+    box-shadow           : 0 5px 9px 0 rgba(0, 0, 0, 0.35);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "carousel"
+      "services"
+      "about"
+      "clients"
+      "reviews"
+      "contacts"
+}
+
+.grid-area {
+    padding: 3rem 0rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+
+    border : 1px black solid;
+
+}
+
+
+.sectionContainer {
+    grid-column-start: 2
+}
+
+.sectionHeader {
+    color: #BDBDBD;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.sectionTitle {
+    color: #333333;
+    line-height: normal;
+    font-weight: 900;
+    font-size: 48px;
+    margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+    .grid-area {
+        grid-template-columns: 1fr 12fr 1fr;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 900px){
+    .grid-area {
+        grid-template-columns: 1fr 12fr 1fr;
+    }
+}
+
+.carousel {
+    grid-area: carousel;
+    padding: 0;
+}
+
+.services {
+    grid-area: services;
+}
+
+.about {
+    grid-area: about;
+}
+
+.clients {
+    grid-area: clients;
+}
+
+.reviews {
+    grid-area: reviews;
+}
+
+.contacts {
+    grid-area: contacts;
+}
+
+.wrapper {
+    padding        : 0;
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-evenly;
+}

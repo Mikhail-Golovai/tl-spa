@@ -1,0 +1,45 @@
+.reviewSlide {
+    background: #EBEBEB;
+    padding: 2rem 4rem;
+}
+
+.reviewSlide .review {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.reviewSlide .customerCard {
+    display: grid;
+    grid-template-columns: 1fr 6fr 9fr;
+    grid-template-areas: 
+    "photo name"
+    "photo position";
+}
+
+.customerCard .photo {
+    grid-area: photo;
+}
+
+.customerCard .name {
+    grid-area: name;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+
+}
+.customerCard .position {
+    grid-area: position;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #4F4F4F;
+}
