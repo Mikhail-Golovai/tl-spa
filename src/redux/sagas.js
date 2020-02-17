@@ -1,0 +1,1 @@
+export {watchFeedbacksActionsSaga} from './modules/feedbacks/saga';
