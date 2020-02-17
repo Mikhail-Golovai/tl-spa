@@ -10,12 +10,12 @@ import Contacts from './Contacts'
 export default function Container () {
     return (
         <article className="resume">
-            <section className="grid-area carousel"><FirstScreen/></section>
-            <section className="grid-area services"><Services/></section>
-            <section className="grid-area about"><About/></section>
-            <section className="grid-area clients"><Clients/></section>
+            <section className="grid-area carousel"><a name="main"/><FirstScreen/></section>
+            <section className="grid-area services"><a name="services"/><Services/></section>
+            <section className="grid-area about"><a name="about"/><About/></section>
+            <section className="grid-area clients"><a name="cases"/><Clients/></section>
             <section className="grid-area reviews"><Reviews/></section>
-            <section className="grid-area contacts"><Contacts/></section>
+            <section className="grid-area contacts"><a name="contacts"/><Contacts/></section>
         </article>
     )
 }

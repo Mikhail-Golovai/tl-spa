@@ -1,0 +1,112 @@
+.contactsContainer {
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    padding: 5rem 3rem 0 3rem;
+    background-image: url('../resources/FirstScreen.svg');
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0 3rem;
+    grid-template-areas: 
+    ". header      body ."
+    ". description body ."
+    ". contacts    body ."
+}
+
+.contactsContainer .sectionTitle {
+    color: white;
+    text-align: left;
+}
+
+.contactsContainer .contactsHeader {
+    grid-area: header;
+}
+
+.contactsContainer .contactsDescription {
+    grid-area: description;
+    text-align: left;
+}
+
+.contactsContainer .contacts {
+    grid-area: contacts;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+}
+
+.contactsContainer .contactsBody {
+    grid-area: body;
+    align-self: center;
+}
+
+.feedbackForm {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "name    soname"
+    "message message"
+    ".       button"
+}
+
+.feedbackForm .feedbackError {
+    color: #d50000;
+    position: absolute;
+    font-size: 12px;
+    margin-top: 3px;
+    display: block;
+}
+
+.feedbackForm .name {
+    grid-area: name;
+}
+
+.feedbackForm .soname {
+    grid-area: soname;
+}
+
+.feedbackForm .message {
+    grid-area: message;
+}
+
+.feedbackForm .button {
+    grid-area: button;
+}
+
+.feedbackForm .mdl-textfield__label {
+    color: #FFFFFF !important; 
+}
+
+.feedbackForm .mdl-textfield__input{
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.feedbackForm .mdl-textfield__label:after {
+    background-color: #FFFFFF !important; 
+}
+
+.feedbackForm .mdl-button--raised[disabled] {
+    background-color: rgba(255,255,255,.12);
+    color: rgba(255,255,255,.26);
+}
+
+@media (max-width: 1200px) {
+    .contactsContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        ". header      ."
+        ". description ."
+        ". contacts    ."
+        ". body    .";
+        padding: 0;
+    }
+    .contactsContainer .contactsBody {
+        margin-left: -3rem;
+    }
+    .contactsBody .feedbackForm {
+        grid-template-areas: 
+        "name    soname"
+        "message button";
+    }
+}

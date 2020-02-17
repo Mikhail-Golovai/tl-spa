@@ -1,0 +1,45 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr 1fr;
+    place-items: center;
+    
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+header img {
+    grid-column-start: 2;
+    justify-self: left;
+}
+
+header .headerMain {
+    grid-column-start: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+header .headerContacts {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+}
+
+header nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 4rem;
+    place-items: center;
+}
+
+nav a,a::selection{
+    color: #222222;
+    text-decoration: none;
+}

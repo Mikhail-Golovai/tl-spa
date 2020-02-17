@@ -3,14 +3,25 @@
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
+    position: relative;
 }
 
-.firstScreenContainer .slideshow-container {
-    display: block;
-}
 
 .firstScreenContainer .prev {
-    left: 0;
+    top: 90%;
+    right: 13rem;
+}
+
+.firstScreenContainer .next {
+    top: 90%;
+    right: 10rem;
+}
+
+.firstScreenContainer .dotsContainer {
+    
+    position: absolute;
+    top: 95%;
+    left: 14rem;
 }
 
 

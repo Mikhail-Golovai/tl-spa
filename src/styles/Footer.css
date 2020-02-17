@@ -1,0 +1,20 @@
+footer {
+    height: 7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    
+    text-align: right;
+    
+    color: #000000;
+}
+
+footer p {
+    margin: 0;
+}

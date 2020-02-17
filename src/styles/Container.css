@@ -16,7 +16,7 @@
 
 .resume {
     display: grid;
-    box-shadow           : 0 5px 9px 0 rgba(0, 0, 0, 0.35);
+    /*box-shadow           : 0 5px 9px 0 rgba(0, 0, 0, 0.35);*/
     grid-template-columns: 1fr;
     grid-template-areas:
       "carousel"
@@ -27,15 +27,18 @@
       "contacts"
 }
 
+.resume section:nth-child(2n) {
+    background: #EBEBEB;
+}
+
 .grid-area {
     padding: 3rem 0rem;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
 
-    border : 1px black solid;
+    /*border : 1px black solid;*/
 
 }
-
 
 .sectionContainer {
     grid-column-start: 2
@@ -91,6 +94,7 @@
 
 .contacts {
     grid-area: contacts;
+    padding: 0;
 }
 
 .wrapper {
