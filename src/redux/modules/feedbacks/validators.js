@@ -1,9 +1,22 @@
-export default function validateData(data){
-    const {name, soname, message} = data
+const defauldValidation = {
+  name: { isValid: true, errorMessage: null},
+  soname: { isValid: true, errorMessage: null},
+  message: { isValid: true, errorMessage: null}
+}
+
+export default function validateData({newFormData, changedFields}){
+    const validators = {
+      name: validateName,
+      soname: validateSoname,
+      message: validateMessage,
+    }
+    const validatedData = changedFields.reduce((acc, type) => {
+      acc[type] = validators[type](newFormData[type])
+      return acc
+    }, {})
     return {
-        name: validateName(name),
-        soname: validateSoname(soname),
-        message: validateMessage(message),
+      ...defauldValidation,
+      ...validatedData
     }
 }
 

@@ -6,7 +6,7 @@ export function* fetchFeedbacksWorker(action) {
     const {payload} = action
     const formValidation = validateData(payload)
     const formData = {
-        data: payload,
+        data: payload.newFormData,
         formValidation
     }
     yield put(ValidateFeedbacks(formData));

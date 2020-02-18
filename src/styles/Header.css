@@ -1,6 +1,6 @@
 header {
     display: grid;
-    grid-template-columns: 1fr 2fr 4fr 1fr;
+    grid-template-columns: 1fr 1fr 4fr 1fr;
     place-items: center;
     
     font-family: Lato;
@@ -14,7 +14,7 @@ header {
     color: #222222;
 }
 
-header img {
+header .icon {
     grid-column-start: 2;
     justify-self: left;
 }
@@ -29,7 +29,7 @@ header .headerContacts {
     margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 3rem;
+    grid-gap: 1rem;
 }
 
 header nav {
@@ -42,4 +42,30 @@ header nav {
 nav a,a::selection{
     color: #222222;
     text-decoration: none;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.headerContacts .phone:before {    
+    margin-right: 0.2rem;
+    content: url('../resources/phone.svg');
+}
+
+.headerContacts .workHours:before {
+    margin-right: 0.2rem;
+    content: url('../resources/clock.svg');
+}
+
+.headerContacts .email:before {
+    margin-right: 0.2rem;
+    content: url('../resources/mail.svg');
+}
+.headerContacts .address:before {
+    margin-right: 0.2rem;
+    content: url('../resources/placeholder.svg');
 }

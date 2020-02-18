@@ -13,7 +13,7 @@ const FACTS_LIST = [
         }
     },
     {
-        header: '90',
+        header: '91',
         text: 'Завершено крупных сделок',
         link: {
             label: 'Все кейсы',
@@ -21,7 +21,7 @@ const FACTS_LIST = [
         }
     },
     {
-        header: '90',
+        header: '92',
         text: 'Завершено крупных сделок',
         link: {
             label: 'Все кейсы',
@@ -29,7 +29,7 @@ const FACTS_LIST = [
         }
     },
     {
-        header: '90',
+        header: '93',
         text: 'Завершено крупных сделок',
         link: {
             label: 'Все кейсы',

@@ -23,6 +23,12 @@ class Carousel extends Component {
         })
     }
 
+    currentSlide(n){
+        this.setState((prev) => {
+            return { slideIndex: n }
+        })
+    }
+
     preventSlideOverflow(newIndex) {
         const length = this.props.children.length
         if (newIndex > length) {return newIndex % length}
@@ -46,7 +52,7 @@ class Carousel extends Component {
             const slideStyle = ranges.some(b=>isInRange(index,b)) ? {display: 'block'} : {display: 'none'}
             const dotClassName = ranges.some(b=>isInRange(index,b)) ? 'dot active' : 'dot' 
             acc.slides.push(<div key={index} className="fade" style={slideStyle}>{slide}</div>)
-            acc.dots.push(<span key={index} className={dotClassName} ></span>)
+            acc.dots.push(<span key={index} className={dotClassName} onClick={() => this.currentSlide(index+1)}></span>)
             return acc;
         }, {slides: [], dots: []});
         

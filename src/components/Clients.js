@@ -4,30 +4,14 @@ import ClientSlide from './util/slides/ClientSlide'
 import img from '../resources/Logo.svg'
 
 const SLIDES = [
-    {
-        img: img
-    },
-    {
-        img: img
-    },
-    {
-        img: img
-    },
-    {
-        img: img
-    },
-    {
-        img: img
-    },
-    {
-        img: img
-    },
-    {
-        img: img
-    },
-    {
-        img: img
-    }
+    { img },
+    { img },
+    { img },
+    { img },
+    { img },
+    { img },
+    { img },
+    { img }
 ]
 
 export default function Clients() {

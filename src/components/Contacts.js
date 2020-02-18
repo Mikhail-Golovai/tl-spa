@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import { UpdateFeedbacks } from '../redux/modules/feedbacks'
 import {every, values} from 'lodash'
@@ -7,6 +7,7 @@ import '../styles/Contacts.css'
 
 export default function Contacts () {
 
+    const fieldsToValidate = useRef([])
 
     const formData = useSelector((state) => {
         return({
@@ -14,14 +15,15 @@ export default function Contacts () {
     })}, shallowEqual) 
     const dispatch = useDispatch()
 
-    function setFormData(newFormData) {dispatch(UpdateFeedbacks(newFormData))}
+    function setFormData(newFormData, changedFields) {dispatch(UpdateFeedbacks({newFormData, changedFields}))}
 
     function handleChangeFormData(event) {
         const {name, value} = event.target
+        if (!fieldsToValidate.current.includes(name)) fieldsToValidate.current.push(name)
         setFormData({
                 ...formData.data,
                 [name]: value
-        })
+        }, fieldsToValidate.current)
     }
 
     function handleSubmit(event) {
@@ -65,7 +67,7 @@ export default function Contacts () {
                             placeholder="Иван" 
                             onChange={handleChangeFormData}
                         />
-                        <label className="mdl-textfield__label" for="feedback_name">Имя</label>
+                        <label className="mdl-textfield__label" htmlFor="feedback_name">Имя</label>
                         <span  className="feedbackError" style={exceptionNameStyle}>{formValidation.name.errorMessage}</span>
                     </div>
                     
@@ -79,7 +81,7 @@ export default function Contacts () {
                             onChange={handleChangeFormData}
                         />
                         <span style={exceptionSonameStyle} className="feedbackError">{formValidation.soname.errorMessage}</span>
-                        <label className="mdl-textfield__label" for="feedback_soname">Фамилия</label>
+                        <label className="mdl-textfield__label" htmlFor="feedback_soname">Фамилия</label>
                     </div>
 
                     <div className="mdl-textfield mdl-js-textfield message">
@@ -92,7 +94,7 @@ export default function Contacts () {
                         >
                         </textarea>
                         <span style={exceptionMessageStyle} className="feedbackError">{formValidation.message.errorMessage}</span>
-                        <label className="mdl-textfield__label" for="feedback_message">Сообщение</label>
+                        <label className="mdl-textfield__label" htmlFor="feedback_message">Сообщение</label>
                     </div>
 
                     <button

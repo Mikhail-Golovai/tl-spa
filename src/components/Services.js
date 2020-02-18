@@ -4,33 +4,27 @@ import '../styles/Services.css'
 
 const SERVICES_LIST = [
     {
-        header: 'Бухгалтерское обслуживание',
+        header: 'Бухгалтерское обслуживание#1',
         isClickable: true
     },
     {
-        header: 'Бухгалтерское обслуживание',
+        header: 'Бухгалтерское обслуживание#2',
         isClickable: true
     },
     {
-        header: 'Бухгалтерское обслуживание',
+        header: 'Бухгалтерское обслуживание#3',
         isClickable: true
     },
     {
-        header: 'Бухгалтерское обслуживание',
+        header: 'Бухгалтерское обслуживание#4',
         isClickable: true
     },
     {
-        header: '90',
-        text: 'Завершено крупных сделок',
+        header: 'Бухгалтерское обслуживание#5',
         isClickable: true
     },
     {
-        header: '90',
-        text: 'Завершено крупных сделок',
-        link: {
-            label: 'Все кейсы',
-            ref: 'http://google.com'
-        },
+        header: 'Бухгалтерское обслуживание#6',
         isClickable: true
     }
 ] //TODO: move to store or const file
